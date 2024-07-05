@@ -1,17 +1,19 @@
-import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import About from "./page/About";
 import Home from "./page/Home";
+import Nav from "./components/Nav";
+import Info from "./page/Info";
 
 function App() {
   return (
     <BrowserRouter>
-        <Link to="/">홈</Link>
-        <Link to="/about">소개</Link>
-
+      <Nav />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/info/:id" element={<Info />} />
+
       </Routes>
     </BrowserRouter>
   );
