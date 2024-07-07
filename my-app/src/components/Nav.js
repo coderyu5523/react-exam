@@ -6,6 +6,7 @@ function Nav(props) {
         <div>
          <Link to="/">홈</Link>
          <Link to="/about">소개</Link>
+         <Link to="/login">로그인화면가기</Link>
         </div>
     );
 }

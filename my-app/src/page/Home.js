@@ -1,7 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
+
+
 function Home(props) {
+
+  // let [user,setUser] = useState({
+  //   id : undefined,
+  //   username:"",
+  //   password:""
+  // })
+ 
   const navigate = useNavigate();
 
   function moveAbout() {
