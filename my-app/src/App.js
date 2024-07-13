@@ -7,6 +7,7 @@ import Info from "./page/Info";
 import List from "./page/List";
 import Login from "./page/Login";
 import LoginComplete from "./page/LoginComplete";
+import Post from "./page/Post";
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
         <Route path="/list" element={<List />}/>
         <Route path="/login" element={<Login />}/>
         <Route path="/loginComplete" element={<LoginComplete />}/>
-
+        <Route path="/post" element={<Post />}/>
 
       </Routes>
     </BrowserRouter>
