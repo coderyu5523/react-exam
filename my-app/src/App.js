@@ -1,29 +1,30 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import "./App.css";
-import About from "./page/About";
-import Home from "./page/Home";
-import Nav from "./components/Nav";
-import Info from "./page/Info";
-import List from "./page/List";
-import Login from "./page/Login";
-import LoginComplete from "./page/LoginComplete";
-import Post from "./page/Post";
+import { Nav, Navbar } from "react-bootstrap";
+import { BrowserRouter, Link } from "react-router-dom";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Nav />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/info/:id" element={<Info />} />
-        <Route path="/list" element={<List />}/>
-        <Route path="/login" element={<Login />}/>
-        <Route path="/loginComplete" element={<LoginComplete />}/>
-        <Route path="/post" element={<Post />}/>
-
-      </Routes>
-    </BrowserRouter>
+    <div>
+      <Navbar bg="dark" expand="lg" variant="dark">
+        <Link to="/" className="navbar-brand">
+          블로그홈
+        </Link>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="mr-auto">
+            <Link to="/saveForm" className="nav-link">
+              글쓰기
+            </Link>
+            <Link className="nav-link">로그아웃</Link>
+            <Link to="/loginForm" className="nav-link">
+              로그인
+            </Link>
+            <Link to="/joinForm" className="nav-link">
+              회원가입
+            </Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Navbar>
+      </div>
   );
 }
 
